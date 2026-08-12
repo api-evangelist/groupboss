@@ -1,0 +1,34 @@
+generated: '2026-08-12'
+method: searched
+source: https://groupboss.io/faq
+note: >-
+  Groupboss publishes no public API, therefore no API rate limits, no rate-limit
+  response headers and no 429 semantics exist to record. This is an honest zero,
+  not an unchecked field. The only quota Groupboss meters is the number of
+  Facebook Groups per subscription tier, which is captured in
+  plans/groupboss-plans-pricing.yml, not here.
+limit_count: 0
+headers: []
+status_code_on_exhaustion: null
+retry_after: null
+quotas_documented_elsewhere:
+  facebook_groups_per_plan: plans/groupboss-plans-pricing.yml
+  member_approvals: unlimited (per pricing page)
+upstream_constraints:
+  note: >-
+    Groupboss is a consumer of other providers' APIs (Mailchimp, ActiveCampaign,
+    HubSpot, GoHighLevel, Google Sheets and ~30 more) using the customer's own API
+    keys. Any rate limiting a customer experiences is imposed by those upstream
+    providers against the customer's own credentials, not by Groupboss.
+x-evidence:
+- url: https://groupboss.io/faq
+  status: 200
+  fetched: '2026-08-12'
+- url: https://groupboss.io/api
+  status: 200
+  verdict: soft-404 (untitled catch-all shell, no API surface)
+  fetched: '2026-08-12'
+- url: https://groupboss.io/developers
+  status: 200
+  verdict: soft-404 (untitled catch-all shell, no developer program)
+  fetched: '2026-08-12'

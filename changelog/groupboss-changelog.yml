@@ -1,0 +1,101 @@
+generated: '2026-08-12'
+method: searched
+source: https://groupboss.io/help/groupboss-version-4/
+platform: Canny
+changelog_url: https://groupboss.canny.io/changelog
+feature_requests_url: https://groupboss.canny.io/feature-requests
+note: >-
+  Groupboss publishes a real, dated, public changelog on a hosted Canny board,
+  linked from the site footer. It tracks the Chrome extension and web app product,
+  not an API — there is no API version history because there is no public API.
+  https://groupboss.canny.io/roadmap returns 404, so there is no published roadmap.
+scheme: semver
+current_version: 4.2.0
+dated: true
+machine_readable_feed: false
+recent_window: 2024-11-12 to 2026-06-29
+entries:
+- version: 4.2.0
+  date: '2026-06-29'
+  title: 'Groupboss 4.2.0: Seamless Onboarding, Quick Guides, and More'
+  breaking: false
+  additions:
+  - New welcome page
+  - Quick setup guides
+  - Optional feedback flow on uninstall
+- version: 4.1.0
+  date: '2026-04-06'
+  title: Groupboss Version 4.1.0 is Now Live
+  breaking: false
+  fixes:
+  - Auto-approval and auto-decline in public groups
+  - Stability improvements
+  - Dashboard enhancements
+- version: 4.0.0
+  date: '2025-12-02'
+  title: What's New on Groupboss Version 4.0.0
+  breaking: false
+  highlights:
+  - Complete UI redesign
+  - Data collection history tracking
+  - Revamped notifications
+  - Multiple bug fixes
+- version: 3.0.4
+  date: '2025-11-12'
+  title: Groupboss is Updated to Version 3.0.4
+  breaking: false
+  highlights:
+  - Integration renames (ConvertKit to Kit, Sendinblue to Brevo)
+  - Minor improvements
+- version: 3.0.3
+  date: '2025-06-06'
+  title: Groupboss Version 3.0.3 is Live
+  breaking: false
+  highlights:
+  - Addressed breakage caused by Facebook platform changes to member approval
+- version: null
+  date: '2025-05-12'
+  title: SendPulse Integration With Groupboss
+  breaking: false
+  additions:
+  - SendPulse email service provider integration
+- version: 3.0.2
+  date: '2025-02-25'
+  title: Groupboss Version 3.0.2
+  breaking: false
+  fixes:
+  - Google Sheets integration issues
+  - Automatic approval/decline conditions
+- version: 3.0.1
+  date: '2025-02-25'
+  title: Groupboss Version 3.0.1 is Live
+  breaking: false
+  additions:
+  - Data collection history (beta)
+  fixes:
+  - Public group auto-approval problems
+- version: 3.0.0
+  date: '2025-02-05'
+  title: 'Groupboss V3 is Live: A Mega Update'
+  breaking: false
+  highlights:
+  - Automatic approval and decline
+  - UI redesign
+  - Retry functionality
+  - Internal integration API improvements
+- version: null
+  date: '2024-11-12'
+  title: MailPoet Integration is Live
+  breaking: false
+  additions:
+  - MailPoet email marketing platform integration
+x-evidence:
+- url: https://groupboss.canny.io/changelog
+  status: 200
+  fetched: '2026-08-12'
+- url: https://groupboss.canny.io/roadmap
+  status: 404
+  fetched: '2026-08-12'
+- url: https://groupboss.canny.io/feature-requests
+  status: 200
+  fetched: '2026-08-12'

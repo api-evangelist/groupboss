@@ -1,0 +1,73 @@
+generated: '2026-08-12'
+method: probed
+source: live HTTPS probes of every Groupboss host
+note: >-
+  Every /.well-known/ path probed returned a real HTTP 404 on groupboss.io and
+  support.groupboss.io. On app.groupboss.io and api.groupboss.com the origin is a
+  catch-all single-page/marketing shell that answers HTTP 200 with HTML for EVERY
+  path, so those 200s are soft-404s and are NOT documents. No WellKnown or
+  SecurityTxt pointer is emitted — a recorded absence is data, not a presence.
+hosts:
+- host: https://groupboss.io
+  catch_all_200: false
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+- host: https://support.groupboss.io
+  catch_all_200: false
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+- host: https://app.groupboss.io
+  catch_all_200: true
+  catch_all_note: >-
+    Returns HTTP 200 with the same 1758-byte React shell for every path, including
+    /openapi.json, /graphql and /.well-known/*. Treated as a miss on all paths.
+  documents:
+  - path: /.well-known/agent-card.json
+    status: 200
+    verdict: soft-404
+    content_type: text/html
+  - path: /.well-known/agent.json
+    status: 200
+    verdict: soft-404
+    content_type: text/html
+- host: https://api.groupboss.com
+  catch_all_200: true
+  catch_all_note: >-
+    Despite the api.* hostname this is a marketing/landing origin, not an API. It
+    returns HTTP 200 with the same 44826-byte HTML page for every path probed
+    (/openapi.json, /swagger.json, /graphql, /api-docs, /.well-known/*).
+  documents:
+  - path: /.well-known/agent-card.json
+    status: 200
+    verdict: soft-404
+    content_type: text/html
+  - path: /.well-known/agent.json
+    status: 200
+    verdict: soft-404
+    content_type: text/html
+summary:
+  paths_probed: 18
+  real_documents_found: 0
+  security_txt: false
+  openid_configuration: false
+  oauth_authorization_server: false
+  api_catalog: false
+  agent_card: false

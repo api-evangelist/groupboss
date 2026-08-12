@@ -1,18 +1,38 @@
 aid: groupboss
 name: Groupboss
-description: Groupboss is a company surfaced via the API Evangelist marketing integration graph — named
-  as an integration by 2 members of the programmable-marketing cohort — and added to the network as a
-  stub for full-pipeline profiling.
+description: >-
+  Groupboss is a Facebook Group lead-generation and member-onboarding tool sold as
+  a Chrome extension paired with a hosted web app. When someone requests to join a
+  Facebook Group, Groupboss captures the answers to the group's membership
+  questions — including the email address — approves or declines the member
+  automatically against rules the admin sets, and pushes the captured lead into
+  Google Sheets and into the admin's email marketing platform or CRM. It ships
+  connectors for roughly thirty destinations including Mailchimp, ActiveCampaign,
+  Klaviyo, Brevo, GetResponse, Kit, Drip, MailerLite, Omnisend, HubSpot, Zoho CRM,
+  GoHighLevel, Airtable, FluentCRM, ClickFunnels and Systeme.io. Those connectors
+  are one-directional and consume the customer's own API key for each destination
+  platform; Groupboss itself publishes no public API, no webhooks and no developer
+  program, so it is a pure API consumer rather than an API producer.
+image: https://d3lonve0ytqgeg.cloudfront.net/media/logo.png
 url: https://raw.githubusercontent.com/api-evangelist/groupboss/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:marketing-integration-graph
-x-tier: stub
-x-tier-reason: harvest
+x-tier: profile
+x-tier-reason: enriched
 specificationVersion: '0.20'
 created: '2026-08-12'
 modified: '2026-08-12'
 tags:
 - Company
+- Lead Generation
+- Marketing
+- Marketing Automation
+- Email Marketing
+- CRM
+- Social Media
+- Community
+- Browser Extension
+- SaaS
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -22,7 +42,67 @@ maintainers:
 common:
 - type: Website
   url: https://groupboss.io/
+- type: Support
+  url: https://groupboss.io/help/
+- type: Blog
+  url: https://groupboss.io/blog
+- type: BlogRSS
+  url: https://groupboss.io/blog/rss/
+- type: Pricing
+  url: https://groupboss.io/pricing
+- type: Login
+  url: https://app.groupboss.io/login
+- type: TermsOfService
+  url: https://groupboss.io/terms-of-service
+- type: PrivacyPolicy
+  url: https://groupboss.io/privacy-policy
+- type: FAQ
+  url: https://groupboss.io/faq
+- type: Integrations
+  url: https://groupboss.io/integrations
+- type: Download
+  url: https://chromewebstore.google.com/detail/groupboss/gakcpcoikgklfbajjkdaomcfkpeiobfl
+- type: ChangeLog
+  url: changelog/groupboss-changelog.yml
+- type: Plans
+  url: plans/groupboss-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/groupboss-rate-limits.yml
+- type: Conformance
+  url: conformance/groupboss-conformance.yml
+- type: LLMsTxt
+  url: llms/groupboss-llms.txt
+- type: LlmsText
+  url: https://groupboss.io/llms.txt
+- type: DomainSecurity
+  url: security/groupboss-domain-security.yml
 x-vouched-by:
 - Drip
 - MailerLite
 x-vouch-count: 2
+x-enrichment:
+  date: '2026-08-12'
+  status: minimal
+  artifacts_added: 8
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    Groupboss is a Chrome-extension SaaS that consumes ~30 other providers' APIs
+    using the customer's own API keys and publishes none of its own — groupboss.io
+    /api and /developers both return an untitled catch-all shell byte-identical to
+    a nonsense path, and no spec answered on groupboss.io, app.groupboss.io,
+    api.groupboss.com or support.groupboss.io.
+  evidence:
+  - url: https://groupboss.io/api
+    status: 200
+  - url: https://groupboss.io/developers
+    status: 200
+  - url: https://api.groupboss.com/openapi.json
+    status: 200
+  - url: https://support.groupboss.io/openapi.json
+    status: 404
+  - url: https://groupboss.io/.well-known/agent-card.json
+    status: 404
+  checked: '2026-08-12'

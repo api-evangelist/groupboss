@@ -1,0 +1,72 @@
+generated: '2026-08-12'
+method: searched
+source: https://groupboss.io/pricing
+note: >-
+  Groupboss sells a Facebook Group lead-capture SaaS (Chrome extension + web app),
+  not API access. The plans below are product subscription tiers; there is no API
+  plan, no metered API pricing and no developer tier, because Groupboss publishes
+  no public API.
+currency: USD
+billing_periods:
+- annual
+plan_count: 3
+metering: seats-by-group-count
+plans:
+- name: Basic
+  price: 79
+  currency: USD
+  period: year
+  quota:
+    facebook_groups: 2
+    member_approvals: unlimited
+    contacts: unlimited
+  features:
+  - Unlimited member approvals
+  - Data collection history
+  - Google Sheets integration
+  - Email service provider / CRM integrations
+  - CSV and Excel export
+  overage: none-published
+- name: Pro
+  price: 99
+  currency: USD
+  period: year
+  badge: Best Deal
+  quota:
+    facebook_groups: 4
+    member_approvals: unlimited
+    contacts: unlimited
+  features:
+  - Everything in Basic
+  overage: none-published
+- name: Mega
+  price: 189
+  currency: USD
+  period: year
+  quota:
+    facebook_groups: 20
+    member_approvals: unlimited
+    contacts: unlimited
+  features:
+  - Everything in Pro
+  overage: none-published
+trial:
+  available: true
+  length_days: 7
+  card_required: unknown
+guarantee:
+  type: money-back
+  window_days: 14
+  terms: >-
+    Full refund, no questions asked, by contacting chat support or emailing
+    support@groupboss.io within 14 days.
+billing:
+  processor: Paddle
+  evidence: cdn.paddle.com/paddle/v2/paddle.js loaded on groupboss.io
+  affiliate_platform: Tolt
+  affiliate_url: https://groupboss.io/affiliate
+enterprise_contact_only: false
+x-evidence:
+- url: https://groupboss.io/pricing
+  status: 200
+  fetched: '2026-08-12'
