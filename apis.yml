@@ -13,6 +13,17 @@ description: >-
   are one-directional and consume the customer's own API key for each destination
   platform; Groupboss itself publishes no public API, no webhooks and no developer
   program, so it is a pure API consumer rather than an API producer.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://d3lonve0ytqgeg.cloudfront.net/media/logo.png
 url: https://raw.githubusercontent.com/api-evangelist/groupboss/refs/heads/main/apis.yml
 x-type: company
