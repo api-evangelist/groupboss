@@ -54,7 +54,7 @@ tags:
 - Marketing Automation
 - Email Marketing
 - CRM
-- Social-Media
+- Social Media
 - Community
 - Browser Extension
 - Software-as-a-Service
@@ -69,6 +69,7 @@ tags_raw:
 - Community
 - Browser Extension
 - SaaS
+- Social-Media
 apis: []
 maintainers:
 - FN: Kin Lane
