@@ -1,0 +1,16 @@
+generated: '2026-10-12'
+method: none
+source:
+- https://zapier.com/apps/groupboss/integrations
+- https://n8n.io/integrations/groupboss/
+- https://composio.dev/toolkits/groupboss
+- https://monid.ai/tools/groupboss
+checked:
+- https://composio.dev/toolkits/groupboss
+- https://monid.ai/tools/groupboss
+- https://n8n.io/integrations/groupboss/
+- https://zapier.com/apps/groupboss/integrations
+summary: null
+marketplace_apps: []
+edges: []
+templates: []
